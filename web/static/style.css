@@ -150,6 +150,7 @@ body {
 .btn.primary { background: var(--accent); color: #fff; }
 .btn.download { background: var(--accent); color: #fff; min-width: 12rem; }
 .btn.download.alt { background: var(--accent-2); }
+.btn.download.csv { background: #2f5d8c; }
 .btn.ghost {
   background: transparent;
   color: var(--ink);

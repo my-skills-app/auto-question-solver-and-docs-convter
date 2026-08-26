@@ -114,6 +114,13 @@ function renderQueue(items) {
         a.textContent = "Excel";
         actions.appendChild(a);
       }
+      if (it.files.csv) {
+        const a = document.createElement("a");
+        a.className = "btn download csv mini";
+        a.href = `/api/jobs/${it.job_id}/download/csv`;
+        a.textContent = "CSV";
+        actions.appendChild(a);
+      }
       if (it.files.docx) {
         const a = document.createElement("a");
         a.className = "btn download alt mini";
