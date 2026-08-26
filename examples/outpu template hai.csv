@@ -1,0 +1,4 @@
+question_r,question_hi,option1_hi,option2_hi,option3_hi,option4_hi,option5_hi,solution_hi,question_en,option1_en,option2_en,option3_en,option4_en,option5_en,solution_en,answer,set_name,difficulty_level
+1,MCQ हिंदी,विकल्प A,विकल्प B,विकल्प C,विकल्प D,,<p>हल</p>,MCQ English question,Opt A,Opt B,Opt C,Opt D,,<p>Solution</p>,D,Paper Name,medium
+2,MSQ हिंदी,,,,,,,MSQ pick 3 and 4,,,,,,,"[""3"",""4""]",Paper Name,medium
+3,NAT हिंदी,,,,,,,Numeric answer question,,,,,,,"{""start"":""86"",""end"":""86""}",Paper Name,medium

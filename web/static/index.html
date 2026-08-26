@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Question Solver</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="bg"></div>
+  <main class="shell">
+    <header class="brand">
+      <p class="brand-mark">AI Question Solver</p>
+      <p class="tagline">Upload multiple papers. Solves one-by-one. Auto-saves Excel &amp; Word with timestamp.</p>
+      <p id="authBadge" class="auth">Checking auth…</p>
+    </header>
+
+    <section class="panel" id="uploadPanel">
+      <label class="drop" id="dropZone" for="fileInput">
+        <input id="fileInput" type="file" accept=".pdf,.png,.jpg,.jpeg,.webp" multiple hidden />
+        <span class="drop-title">Drop multiple PDFs / images</span>
+        <span class="drop-sub">or click to browse · queue solves one after another</span>
+      </label>
+      <div class="row">
+        <label class="check">
+          <input type="checkbox" id="forceImages" checked />
+          Scanned PDF (force page images)
+        </label>
+        <button type="button" id="startBtn" class="btn primary" disabled>Start Queue</button>
+      </div>
+      <ul id="fileList" class="file-list"></ul>
+    </section>
+
+    <section class="panel hidden" id="progressPanel">
+      <div class="progress-head">
+        <h2 id="statusTitle">Batch processing</h2>
+        <span id="pctLabel" class="pct">0%</span>
+      </div>
+      <div class="bar"><div id="barFill" class="bar-fill"></div></div>
+      <p id="statusMsg" class="status-msg">Starting…</p>
+      <p id="folderPath" class="folder-path"></p>
+      <div id="queueList" class="queue-list"></div>
+      <div id="logBox" class="log" aria-live="polite"></div>
+    </section>
+
+    <section class="panel hidden" id="donePanel">
+      <h2>Batch complete</h2>
+      <p id="doneSummary" class="tagline"></p>
+      <p id="doneFolder" class="folder-path"></p>
+      <div id="doneList" class="queue-list"></div>
+      <button type="button" id="againBtn" class="btn ghost wide">Upload more papers</button>
+    </section>
+
+    <section class="panel error hidden" id="errorPanel">
+      <h2>Something went wrong</h2>
+      <p id="errorMsg"></p>
+      <button type="button" id="retryBtn" class="btn primary">Try again</button>
+    </section>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
